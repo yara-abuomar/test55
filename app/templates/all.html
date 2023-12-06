@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>title</th>
+            <th>description</th>
+            <th> action</th>
+            {% for x in allshow %}
+            <tr>
+                <td>{{x.title}}</td>
+                <td>{{x.desc}}</td>
+                <td> <a href="/shows/{{x.id}}">show</a>  <a href="/shows/{{x.id}}/edit">edit</a> <a href="/del/{{x.id}}">delete</a></td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+    <a href="/">add a new show</a>
+</body>
+</html>
